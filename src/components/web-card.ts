@@ -11,7 +11,7 @@ class WebCard extends HTMLElement {
     super();
     this.webLightbox = <WebLightbox>document.createElement("aside", { is: "web-lightbox" });
     this.buttonElement = <HTMLButtonElement>this.querySelector("#lightbox-button");
-    this.openLightbox = this.openLightbox.bind(this);
+    this.toggleLightbox = this.toggleLightbox.bind(this);
   }
 
   connectedCallback() {
@@ -22,16 +22,20 @@ class WebCard extends HTMLElement {
       ease: "power3",
       clearProps: "all",
     });
-    this.buttonElement.addEventListener("click", this.openLightbox);
+    this.buttonElement.addEventListener("click", this.toggleLightbox);
   }
 
   disconnectedCallback() {
-    this.buttonElement.removeEventListener("click", this.openLightbox);
+    this.buttonElement.removeEventListener("click", this.toggleLightbox);
   }
 
-  openLightbox() {
-    document.body.style.overflow = "hidden";
-    this.after(this.webLightbox);
+  toggleLightbox() {
+    if (this.webLightbox.isConnected) {
+      this.webLightbox.closeLightbox();
+    } else {
+      document.body.style.overflow = "hidden";
+      this.after(this.webLightbox);
+    }
   }
 }
 
