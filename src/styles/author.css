@@ -27,6 +27,11 @@
   text-decoration: none;
 }
 
+.author__link:focus-visible {
+  outline: none;
+  color: var(--color-cyan);
+}
+
 .author__link:hover {
   color: var(--color-cyan);
 }

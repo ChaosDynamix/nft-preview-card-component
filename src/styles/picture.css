@@ -17,19 +17,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  visibility: hidden;
+  padding: 0;
   opacity: 0;
   border: none;
   background-color: var(--color-transparent-cyan);
   background-image: url("/src/images/icon-view.svg");
   background-repeat: no-repeat;
   background-position: center;
-  transition-property: visibility, opacity;
+  transition-property: opacity;
   transition-duration: 300ms;
   cursor: pointer;
 }
 
-.picture:hover > .picture__overlay {
-  visibility: visible;
+.picture__overlay:hover {
+  opacity: 1;
+}
+
+.picture__overlay:focus-visible {
   opacity: 1;
 }
