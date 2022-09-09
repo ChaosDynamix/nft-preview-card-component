@@ -1,4 +1,5 @@
 import { CSSPlugin, gsap } from "gsap";
+import illustration from "@images/image-equilibrium.jpg";
 
 gsap.registerPlugin(CSSPlugin);
 
@@ -14,6 +15,7 @@ class WebLightbox extends HTMLElement {
     this.#templateFragment = <DocumentFragment>template.content.cloneNode(true);
     this.overlayElement = <HTMLDivElement>this.#templateFragment.firstElementChild;
     this.pictureElement = <HTMLImageElement>this.#templateFragment.lastElementChild;
+    this.pictureElement.setAttribute("src", illustration);
     this.closeLightbox = this.closeLightbox.bind(this);
   }
 
