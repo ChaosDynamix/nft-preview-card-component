@@ -1,0 +1,43 @@
+.author {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.author__picture {
+  margin-bottom: 1rem;
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  outline: 0.0625rem solid var(--color-white);
+}
+
+.author__name {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: var(--color-soft-blue);
+}
+
+.author__link {
+  color: var(--color-white);
+  transition: color 150ms;
+  text-decoration: none;
+}
+
+.author__link:hover {
+  color: var(--color-cyan);
+}
+
+@media screen and (min-width: 340px) {
+  .author {
+    flex-direction: row;
+  }
+
+  .author__picture {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}

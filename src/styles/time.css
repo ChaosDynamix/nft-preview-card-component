@@ -1,0 +1,24 @@
+.time {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-soft-blue);
+}
+
+.time__icon {
+  margin-right: 0.5rem;
+  width: 1rem;
+}
+
+.time__value {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 340px) {
+  .time {
+    margin-top: 0;
+  }
+}

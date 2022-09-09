@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-main-bg);
+  padding: 3rem 1.5rem;
+}
+
+.page--preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

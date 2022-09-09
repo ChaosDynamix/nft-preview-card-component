@@ -1,64 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" href="src/assets/images/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>NFT Preview Card Component</title>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="src/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <body class="flex justify-start items-center w-full min-h-screen bg-main px-6 py-12 sm:justify-center">
+  <!-- Primary Meta Tags -->
+  <title>NFT Preview Card Component</title>
+  <meta name="title" content="NFT Preview Card Component">
+  <meta name="description" content="Frontend mentor challenge solution for: NFT Preview Card Component">
 
-        <!-- Card -->
-        <main class="w-full h-auto p-6 rounded-2xl shadow-2xl bg-card sm:max-w-card">
-            
-            <!-- Card image -->
-            <div class="relative w-full h-auto rounded-lg overflow-hidden mb-6">
-                <img class="w-full" src="src/assets/images/image-equilibrium.jpg" alt="Equilibrium illustration">
-                <a class="absolute top-0 left-0 w-full h-full opacity-0 bg-transparent-cyan bg-view-icon bg-no-repeat bg-center transition-opacity hover:opacity-100" aria-label="Open Equilibrium illustration" href="#"></a>
-            </div>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://john-mirage.github.io/nft-preview-card-component/">
+  <meta property="og:title" content="NFT Preview Card Component">
+  <meta property="og:description" content="Frontend mentor challenge solution for: NFT Preview Card Component">
+  <meta property="og:image" content="https://john-mirage.github.io/nft-preview-card-component/preview.jpg">
 
-            <!-- Product title -->
-            <a class="block text-center xs:text-left group" href="#">
-                <h1 class="text-[22px] font-semibold text-white mb-4 tracking-[0.02rem] transition-colors group-hover:text-cyan">Equilibrium #3429</h1>
-            </a>
-            
-            <!-- Product description -->
-            <p class="text-center xs:text-left text-base font-light text-soft-blue leading-6 mb-6 sm:text-lg sm:leading-7">Our Equilibrium collection promotes balance and calm.</p>
-            
-            <!-- Product info -->
-            <div class="flex flex-col justify-start items-center space-y-3 xs:flex-row xs:justify-between xs:space-y-0">
-                <!-- Product price -->
-                <div class="flex flex-row items-center">
-                    <svg class="w-2.5 h-auto mr-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 18">
-                        <path class="fill-cyan" d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z"/>
-                    </svg>
-                    <p class="text-center text-base leading-5 font-normal uppercase text-cyan">0.041 ETH</p>
-                </div>
-                <!-- Product time left -->
-                <div class="flex flex-row items-center">
-                    <svg class="w-4 h-auto mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
-                        <path class="fill-soft-blue" d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z"/>
-                    </svg>
-                    <p class="text-center text-base leading-5 font-normal text-soft-blue">3 days left</p>
-                </div>
-            </div>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://john-mirage.github.io/nft-preview-card-component/">
+  <meta property="twitter:title" content="NFT Preview Card Component">
+  <meta property="twitter:description" content="Frontend mentor challenge solution for: NFT Preview Card Component">
+  <meta property="twitter:image" content="https://john-mirage.github.io/nft-preview-card-component/preview.jpg">
+</head>
 
-            <!-- Card divider -->
-            <div class="w-full h-px mb-4 mt-4 bg-line sm:mt-6"></div>
+<body class="page page--preload">
 
-            <!-- Product author -->
-            <div class="flex flex-col items-center xs:flex-row">
-                <img class="flex-shrink-0 flex-grow-0 w-8 h-8 rounded-full outline outline-1 outline-white mb-4 xs:mb-0 xs:mr-4" src="src/assets/images/image-avatar.png" alt="">
-                <p class="text-base text-center xs:text-left leading-5 font-normal text-soft-blue">Creation of <a class="text-white transition-colors hover:text-cyan" href="#">Jules Wyvern</a></p>
-            </div>
-        </main>
+  <!-- Card -->
+  <main class="card" is="web-card">
+    <div class="picture">
+      <img class="picture__image" src="/src/images/image-equilibrium.jpg" alt="Equilibrium illustration">
+      <a class="picture__overlay" aria-label="Open Equilibrium illustration" href="#"></a>
+    </div>
+    <a class="card__link" href="#">
+      <h1 class="card__title">Equilibrium #3429</h1>
+    </a>
+    <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
+    <div class="card__row">
+      <div class="price">
+        <svg class="price__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 18" fill="currentColor">
+          <path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" />
+        </svg>
+        <p class="price__value">0.041 ETH</p>
+      </div>
+      <div class="time">
+        <svg class="time__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" fill="currentColor">
+          <path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" />
+        </svg>
+        <p class="time__value">3 days left</p>
+      </div>
+    </div>
+    <div class="author">
+      <img class="author__picture" src="src/images/image-avatar.png" alt="Jules Wyvern picture">
+      <p class="author__name">Creation of <a class="author__link" href="#">Jules Wyvern</a></p>
+    </div>
+  </main>
 
-        <script type="module" src="/src/main.ts"></script>
-    </body>
+  <script type="module" src="/src/main.ts"></script>
+</body>
 
 </html>
