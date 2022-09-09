@@ -35,7 +35,7 @@
   <main class="card" is="web-card">
     <div class="picture">
       <img class="picture__image" src="/src/images/image-equilibrium.jpg" alt="Equilibrium illustration">
-      <a class="picture__overlay" aria-label="Open Equilibrium illustration" href="#"></a>
+      <button class="picture__overlay" id="lightbox-button" aria-label="Open Equilibrium illustration" href="#"></button>
     </div>
     <a class="card__link" href="#">
       <h1 class="card__title">Equilibrium #3429</h1>
@@ -60,6 +60,11 @@
       <p class="author__name">Creation of <a class="author__link" href="#">Jules Wyvern</a></p>
     </div>
   </main>
+
+  <template id="template-web-lightbox">
+    <div class="lightbox__overlay"></div>
+    <img class="lightbox__picture" src="/src/images/image-equilibrium.jpg" alt="Equilibrium illustration" draggable="false">
+  </template>
 
   <script type="module" src="/src/main.ts"></script>
 </body>

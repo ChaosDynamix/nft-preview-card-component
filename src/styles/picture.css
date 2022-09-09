@@ -19,6 +19,7 @@
   height: 100%;
   visibility: hidden;
   opacity: 0;
+  border: none;
   background-color: var(--color-transparent-cyan);
   background-image: url("/src/images/icon-view.svg");
   background-repeat: no-repeat;
