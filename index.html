@@ -62,8 +62,10 @@
   </main>
 
   <template id="template-web-lightbox">
-    <div class="lightbox__overlay"></div>
-    <img class="lightbox__picture" alt="Equilibrium illustration" draggable="false">
+    <div class="lightbox__container">
+      <div class="lightbox__overlay" id="lightbox-overlay"></div>
+      <img class="lightbox__picture" id="lightbox-picture" alt="Equilibrium illustration" draggable="false">
+    </div>
   </template>
 
   <script type="module" src="/src/main.ts"></script>

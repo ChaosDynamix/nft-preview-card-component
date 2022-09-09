@@ -13,10 +13,11 @@ class WebLightbox extends HTMLElement {
     super();
     const template = <HTMLTemplateElement>document.getElementById("template-web-lightbox");
     this.#templateFragment = <DocumentFragment>template.content.cloneNode(true);
-    this.overlayElement = <HTMLDivElement>this.#templateFragment.firstElementChild;
-    this.pictureElement = <HTMLImageElement>this.#templateFragment.lastElementChild;
+    this.overlayElement = <HTMLDivElement>this.#templateFragment.querySelector("#lightbox-overlay");
+    this.pictureElement = <HTMLImageElement>this.#templateFragment.querySelector("#lightbox-picture");
     this.pictureElement.setAttribute("src", illustration);
     this.closeLightbox = this.closeLightbox.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
   connectedCallback() {
@@ -40,10 +41,12 @@ class WebLightbox extends HTMLElement {
       clearProps: "all",
     }, "start");
     this.overlayElement.addEventListener("click", this.closeLightbox);
+    document.addEventListener("keydown", this.handleKeyDown);
   }
 
   disconnectedCallback() {
     this.overlayElement.removeEventListener("click", this.closeLightbox);
+    document.removeEventListener("keydown", this.handleKeyDown);
   }
 
   closeLightbox() {
@@ -66,6 +69,12 @@ class WebLightbox extends HTMLElement {
       ease: "power3",
       clearProps: "all",
     }, "end");
+  }
+
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.key === "Escape") {
+      this.closeLightbox();
+    }
   }
 }
 
