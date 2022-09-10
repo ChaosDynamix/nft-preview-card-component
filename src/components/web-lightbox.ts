@@ -1,7 +1,5 @@
-import { CSSPlugin, gsap } from "gsap";
+import { gsap } from "gsap";
 import illustration from "@images/image-equilibrium.jpg";
-
-gsap.registerPlugin(CSSPlugin);
 
 class WebLightbox extends HTMLElement {
   #initialMount = true;

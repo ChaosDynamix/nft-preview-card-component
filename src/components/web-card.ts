@@ -1,7 +1,5 @@
-import { CSSPlugin, gsap } from "gsap";
+import { gsap } from "gsap";
 import WebLightbox from "@components/web-lightbox";
-
-gsap.registerPlugin(CSSPlugin);
 
 class WebCard extends HTMLElement {
   webLightbox: WebLightbox;
