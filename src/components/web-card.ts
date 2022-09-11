@@ -1,4 +1,3 @@
-import { gsap } from "gsap";
 import WebLightbox from "@components/web-lightbox";
 
 class WebCard extends HTMLElement {
@@ -13,13 +12,6 @@ class WebCard extends HTMLElement {
   }
 
   connectedCallback() {
-    gsap.from(this, {
-      opacity: 0,
-      scale: 0.8,
-      duration: 0.6,
-      ease: "power3",
-      clearProps: "all",
-    });
     this.buttonElement.addEventListener("click", this.toggleLightbox);
   }
 
